@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Privacy Policy — Babbel Export</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+        max-width: 720px;
+        margin: 40px auto;
+        padding: 0 20px;
+        color: #111;
+      }
+      h1,
+      h2 {
+        color: #0b3b66;
+      }
+      footer {
+        font-size: 0.9em;
+        color: #555;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Privacy Policy</h1>
+    <p>
+      This page describes how the Chrome extension <strong>Babbel Export</strong>
+      handles user data. This policy applies to the extension as published in
+      the Chrome Web Store.
+    </p>
+
+    <h2>Single Purpose</h2>
+    <p>
+      The extension's sole purpose is to extract a user's learning progress data
+      from Babbel and provide it to the user as a local file (e.g. CSV or JSON)
+      for download.
+    </p>
+
+    <h2>Data Processed</h2>
+    <ul>
+      <li>
+        <strong>Website content (Babbel)</strong>: On export, the extension reads
+        only the visible content on Babbel pages necessary to produce the export
+        (e.g., course/lesson names, progress values, timestamps).
+      </li>
+      <li>
+        <strong>Settings</strong>: Optionally, only local settings (e.g. preferred
+        export format) are stored in <code>chrome.storage</code>.
+      </li>
+      <li>No data is sent to external servers.</li>
+    </ul>
+
+    <h2>Permissions and Justification</h2>
+    <ul>
+      <li>
+        <strong>storage</strong>: Used to persist user preferences locally (e.g.
+        export format). Data stays in the user's browser.
+      </li>
+      <li>
+        <strong>scripting</strong>: Required to inject a script into the active
+        Babbel page on user request to read visible content for export.
+      </li>
+      <li>
+        <strong>activeTab</strong>: Allows temporary execution in the currently
+        active tab after a direct user action.
+      </li>
+      <li>
+        <strong>Host permission (https://*.babbel.com/*)</strong>: Required so
+        the extension can read visible content on Babbel domains to create a
+        valid export. The permission is used only when the user triggers export.
+      </li>
+    </ul>
+
+    <h2>Remote Code</h2>
+    <p>
+      The extension does not load JavaScript or WebAssembly code from external
+      servers. All executable code is included in the extension package. No
+      remote code is used.
+    </p>
+
+    <h2>Disclosure and Sale of Data</h2>
+    <p>
+      No user data is sold or disclosed to third parties, except in cases
+      strictly required for the single purpose (e.g., creating a local file).
+      No data is used for other purposes such as advertising or credit checks.
+    </p>
+
+    <h2>Storage and Deletion</h2>
+    <p>
+      Persisted data (settings) is stored locally in the browser
+      (<code>chrome.storage</code>) and can be deleted by the user via the
+      extension options or by uninstalling the extension. Exported files are
+      only saved to the user's device when the user confirms the download.
+    </p>
+
+    <h2>Security</h2>
+    <p>
+      Reasonable measures are taken to protect stored data in the browser from
+      unauthorized access. The extension does not transmit data to external
+      servers, reducing attack surface.
+    </p>
+
+    <h2>Changes to this Privacy Policy</h2>
+    <p>
+      Changes to this privacy policy will be posted on this page. Users should
+      review this page periodically.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Questions? Contact: <a href="mailto:you@example.com">you@example.com</a>
+      (please replace with your contact email).
+    </p>
+
+    <footer>
+      <p>Last updated: 07.06.2026</p>
+    </footer>
+  </body>
+</html>
