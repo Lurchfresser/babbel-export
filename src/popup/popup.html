@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Babbel → Anki</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="header">
+      <svg
+        width="28"
+        height="28"
+        viewBox="0 0 32 32"
+        fill="white"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M30.4201 11.2263C30.2477 13.1551 29.4363 14.5513 28.0002 15.3871C29.0656 15.7236 29.8735 16.2864 30.4063 17.0555C31.0469 17.9779 31.3109 19.1358 31.1892 20.4883C31.029 22.2915 30.2265 23.6831 28.8038 24.6212C27.4158 25.5365 25.7818 26 23.9457 26H17.4849C17.4543 25.9948 17.448 25.9948 17.0754 25.9867L15.7616 24.1607L17.2117 7.83607C17.2487 7.42739 17.6897 6.74789 17.6897 6.74789C18.5046 6.11235 19.2257 6.00299 19.2257 6.00299H24.6969C26.3461 6 27.7585 6.44504 28.8931 7.32454C30.0568 8.22358 30.5681 9.53672 30.4201 11.2263ZM20.6047 9.18475L20.1528 14.2642H23.5943C24.3857 14.2642 25.0524 14.0569 25.6297 13.6281C26.1753 13.2246 26.4928 12.5508 26.577 11.6257C26.6465 10.8417 26.4363 10.2564 25.9371 9.83657C25.4274 9.40455 24.7317 9.18475 23.8746 9.18475H20.6047ZM26.2579 22.1463C25.5515 22.5889 24.6488 22.8098 23.5742 22.8098H19.3943L19.8456 17.7136H24.1695C25.3228 17.7136 26.2006 17.7874 26.7133 18.24C27.2529 18.7165 27.459 19.2956 27.3897 20.0891C27.3031 21.0549 26.9332 21.7303 26.2579 22.1463Z"
+        />
+      </svg>
+      <div class="header-text">
+        <h1>Babbel → Anki Exporter</h1>
+        <p>Export vocabulary as Anki-ready CSV</p>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="status-box" id="statusBox">
+        <span class="status-icon" id="statusIcon">⏳</span>
+        <div class="status-text" id="statusText">
+          <strong>Checking page...</strong>
+          Looking for vocabulary on this tab.
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="exportBtn" disabled>
+        <span id="btnContent">Export to CSV</span>
+      </button>
+
+      <div class="separator"></div>
+
+      <div class="option">
+        <label>
+          <input type="checkbox" id="startAtFirstPage" checked />
+          Go to first page before extracting all pages
+        </label>
+      </div>
+
+      <p class="hint">
+        Navigate to your
+        <a href="https://my.babbel.com/review-manager/all" target="_blank"
+          >Babbel vocabulary list</a
+        >, then click Export. In Anki: <strong>File → Import</strong>, pick the
+        CSV.
+      </p>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

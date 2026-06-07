@@ -1,0 +1,17 @@
+{
+  "name": "babbel-export",
+  "version": "0.1.0",
+  "description": "Chrome extension scaffold for exporting data from Babbel",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "tsc",
+    "prepare-dist": "npm run clean && npm run build && mkdir -p dist/popup && cp src/popup/popup.html dist/popup/ && cp src/popup/popup.css dist/popup/ && cp -r icons dist/ && cp manifest.json dist/",
+    "watch": "tsc -w",
+    "zip": "npm run prepare-dist && cd dist && zip -r ../babbel-export.zip .",
+    "lint": "echo 'No linter configured'"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.0",
+    "@types/chrome": "^0.0.183"
+  }
+}
